@@ -11,6 +11,8 @@ alias j		jobs -l
 alias la	ls -aF
 alias lf	ls -FA
 alias ll	ls -lAF
+alias lsa   la -la
+alias dev   cd ~/dev
 
 # These are normally set through /etc/login.conf.  You may override them here
 # if wanted.
@@ -39,7 +41,12 @@ if ($?prompt) then
 		bindkey "^W" backward-delete-word
 		bindkey -k up history-search-backward
 		bindkey -k down history-search-forward
+		#bindkey -b C-left
+		bindkey ";5C" forward-word
+		bindkey ";5D" backward-word
+
 	endif
 
 endif
+
 
